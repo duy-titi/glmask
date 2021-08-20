@@ -45,8 +45,10 @@ function main(){
       build_scene(threeInstances);
     },
 	callbackTrack: function(detectStates, landmarksStabilized, threeFaceFollowers) {
-		console.log('callbacktrack');
-		console.log(threeFaceFollowers);
+		if(detectStates.isDetected) {
+			console.log('callbacktrack');
+			console.log(threeFaceFollowers);
+		}
 	}
   }); //end WebARRocksFaceThreeHelper.init() 
 }
