@@ -382,6 +382,7 @@ const WebARRocksFaceThreeHelper = (function(){
 
 
   function callbackTrack(detectStates){
+	console.log("WebARRocksFaceThreeHelper callbackTrack");
     _gl.viewport(0, 0, that.get_viewWidth(), that.get_viewHeight());
    
     // draw the video:
