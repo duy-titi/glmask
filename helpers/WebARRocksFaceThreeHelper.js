@@ -463,12 +463,8 @@ const WebARRocksFaceThreeHelper = (function(){
 
     if (solved){
       const m = _three.matMov.elements;
-      const r = solved.rotation, t = solved.translation;
-	  
-	  console.log('rotation');
-	  console.log(r);
-	  console.log('translation');
-	  console.log(t);
+      const r = solved.rotation, t = solved.translation;  
+	 
 
       // set translation part:
       m[12] = -t[0], m[13] = -t[1], m[14] = -t[2];
@@ -478,7 +474,9 @@ const WebARRocksFaceThreeHelper = (function(){
       m[1] = -r[1][0], m[5] =  -r[1][1], m[9] =  r[1][2],
       m[2] = -r[2][0], m[6] =  -r[2][1], m[10] =  r[2][2];
 
-     
+	  console.log("matMove");
+	  console.log(_three.matMov);
+	  
       faceSlot.faceFollowerParent.matrix.copy(_three.matMov);	  
       if (_spec.isCenterObjPoints){
         const mean = _computePose.objPointsMean;
