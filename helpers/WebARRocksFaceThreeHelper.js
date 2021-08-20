@@ -382,7 +382,7 @@ const WebARRocksFaceThreeHelper = (function(){
 
 
   function callbackTrack(detectStates){
-	console.log("WebARRocksFaceThreeHelper callbackTrack");
+	//console.log("WebARRocksFaceThreeHelper callbackTrack");
     _gl.viewport(0, 0, that.get_viewWidth(), that.get_viewHeight());
    
     // draw the video:
@@ -474,7 +474,7 @@ const WebARRocksFaceThreeHelper = (function(){
       m[2] = -r[2][0], m[6] =  -r[2][1], m[10] =  r[2][2];
 
      
-      faceSlot.faceFollowerParent.matrix.copy(_three.matMov);
+      //faceSlot.faceFollowerParent.matrix.copy(_three.matMov);
       if (_spec.isCenterObjPoints){
         const mean = _computePose.objPointsMean;
         faceSlot.faceFollower.position.fromArray(mean).multiplyScalar(-1);
