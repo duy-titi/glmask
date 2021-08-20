@@ -475,7 +475,10 @@ const WebARRocksFaceThreeHelper = (function(){
 
      
       faceSlot.faceFollowerParent.matrix.copy(_three.matMov);
-	  console.log("rotation = " + faceSlot.faceFollowerParent.rotation + " scale=" + faceSlot.faceFollowerParent.scale);
+	  console.log('rotation:');
+	  console.log(faceSlot.faceFollowerParent.rotation);
+	  console.log('scale:');
+	  console.log(faceSlot.faceFollowerParent.scale);
       if (_spec.isCenterObjPoints){
         const mean = _computePose.objPointsMean;
         faceSlot.faceFollower.position.fromArray(mean).multiplyScalar(-1);
