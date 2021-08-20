@@ -398,7 +398,11 @@ const WebARRocksFaceThreeHelper = (function(){
     render_three();
     
     if (_spec.callbackTrack){
-      _spec.callbackTrack(detectStates, landmarksStabilized);
+		//[titi]: debug
+		let threeFaceFollowers = _three.faceSlots.map(function(faceSlot){
+			return faceSlot.faceFollower;
+		});
+      _spec.callbackTrack(detectStates, landmarksStabilized, threeFaceFollowers);
     }
   }
 
@@ -472,10 +476,7 @@ const WebARRocksFaceThreeHelper = (function(){
       // set rotation part:
       m[0] = -r[0][0], m[4] =  -r[0][1], m[8] =  r[0][2],
       m[1] = -r[1][0], m[5] =  -r[1][1], m[9] =  r[1][2],
-      m[2] = -r[2][0], m[6] =  -r[2][1], m[10] =  r[2][2];
-
-	  console.log("matMove");
-	  console.log(_three.matMov);
+      m[2] = -r[2][0], m[6] =  -r[2][1], m[10] =  r[2][2];	  
 	  
       faceSlot.faceFollowerParent.matrix.copy(_three.matMov);	  
       if (_spec.isCenterObjPoints){

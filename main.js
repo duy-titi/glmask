@@ -43,7 +43,11 @@ function main(){
       // threeInstances are the THREE.js instances initialized by the helper
       // There are a THREE.Camera, a THREE.Scene and an object following the face
       build_scene(threeInstances);
-    }
+    },
+	callbackTrack: function(detectStates, landmarksStabilized, threeFaceFollowers) {
+		console.log('callbacktrack');
+		console.log(threeFaceFollowers);
+	}
   }); //end WebARRocksFaceThreeHelper.init() 
 }
 
